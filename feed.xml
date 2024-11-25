@@ -1,51 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://yayalingo.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://yayalingo.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-11-25T07:39:47+00:00</updated><id>https://yayalingo.github.io/feed.xml</id><title type="html">blank</title><subtitle>This is a people who want to have a small step to future based on what we have now. </subtitle><entry><title type="html">Fixed issues</title><link href="https://yayalingo.github.io/blog/2024/Git_fixed/" rel="alternate" type="text/html" title="Fixed issues"/><published>2024-11-21T15:06:00+00:00</published><updated>2024-11-21T15:06:00+00:00</updated><id>https://yayalingo.github.io/blog/2024/Git_fixed</id><content type="html" xml:base="https://yayalingo.github.io/blog/2024/Git_fixed/"><![CDATA[<h2 id="git-">Git :</h2> <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">
-</span><span class="c">#Company Account :</span><span class="w">
-
-</span><span class="n">C:\Users\shunduan</span><span class="err">&gt;</span><span class="nx">ssh</span><span class="w"> </span><span class="nt">-T</span><span class="w"> </span><span class="nx">git</span><span class="err">@</span><span class="nx">github.com</span><span class="w">
-</span><span class="c">#Hi yayalingo! You've successfully authenticated, but GitHub does not provide shell access.</span><span class="w">
-
-</span></code></pre></div></div> <h3 id="解决推送被拒绝的问题">解决推送被拒绝的问题</h3> <ol> <li> <p><strong>拉取远程仓库最新更改</strong>：</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git pull origin main
-
-</code></pre></div> </div> </li> <li> <p><strong>解决任何冲突并提交（如果有冲突）</strong>：</p> <ul> <li>打开并编辑有冲突的文件，解决冲突</li> <li>然后执行以下命令</li> </ul> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span>
-git commit <span class="nt">-m</span> <span class="s2">"Resolved merge conflicts"</span>
-
-</code></pre></div> </div> </li> <li> <p><strong>推送本地更改到远程仓库</strong>：</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push <span class="nt">-u</span> origin main
-
-</code></pre></div> </div> </li> </ol> <h3 id="git-常用命令">Git 常用命令</h3> <h3 id="初始化和配置">初始化和配置</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init                      <span class="c"># 初始化一个新的Git仓库</span>
-git clone &lt;repository_url&gt;    <span class="c"># 克隆远程仓库</span>
-git config <span class="nt">--global</span> user.name <span class="s2">"Your Name"</span>    <span class="c"># 设置用户名</span>
-git config <span class="nt">--global</span> user.email <span class="s2">"your_email@example.com"</span>  <span class="c"># 设置用户邮箱</span>
-git remote add origin https://github.com/yayalingo/Sanya.github.io.git <span class="c">#添加远程link</span>
-</code></pre></div></div> <h3 id="基本操作">基本操作</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status                    <span class="c"># 查看仓库当前状态</span>
-git add <span class="nb">.</span>                     <span class="c"># 添加所有更改的文件到暂存区</span>
-git commit <span class="nt">-m</span> <span class="s2">"Commit message"</span> <span class="c"># 提交更改并添加提交消息</span>
-git pull origin main          <span class="c"># 拉取远程仓库最新更改并合并到本地</span>
-git push origin main          <span class="c"># 推送本地更改到远程仓库</span>
-
-</code></pre></div></div> <h3 id="分支操作">分支操作</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch                    <span class="c"># 列出所有本地分支</span>
-git branch &lt;branch_name&gt;      <span class="c"># 创建一个新分支</span>
-git checkout &lt;branch_name&gt;    <span class="c"># 切换到指定分支</span>
-git merge &lt;branch_name&gt;       <span class="c"># 合并指定分支到当前分支</span>
-git branch <span class="nt">-d</span> &lt;branch_name&gt;   <span class="c"># 删除指定分支</span>
-
-</code></pre></div></div> <h3 id="日志和查看">日志和查看</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log                       <span class="c"># 查看提交历史</span>
-git diff                      <span class="c"># 查看未暂存的更改</span>
-git show &lt;commit_hash&gt;        <span class="c"># 显示指定提交的详细信息</span>
-
-</code></pre></div></div> <p>这些命令应该覆盖了大多数常见的 Git 操作场景。如果你需要更详细的命令或帮助，随时可以使用 <code class="language-plaintext highlighter-rouge">git help &lt;command&gt;</code> 来查看具体命令的详细用法。例如：</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git <span class="nb">help </span>push
-
-</code></pre></div></div> <p>希望这些简化的指南和常用命令能够帮助你更有效地使用 Git。</p> <p>Push -</p> <ul> <li>初始化仓库并添加文件： <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-Copy
-git init
-git add yayalingo.github.io/
-git commit <span class="nt">-m</span> <span class="s2">"Initial commit"</span>
-
-</code></pre></div> </div> </li> <li>添加远程仓库并推送： <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add origin git@github.com:yayalingo/yayalingo.github.io.git
-git push <span class="nt">--set-upstream</span> origin master
-
-</code></pre></div> </div> </li> </ul> <p>Path : C:\Users\shunduan\OneDrive - Magna\Desktop\file\KB\GItHub_Page</p> <h2 id="jekyll">Jekyll</h2> <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">jekyll</span><span class="w"> </span><span class="nx">serve</span><span class="w">   </span><span class="c">#本地查看页面Jekyll</span><span class="w">
-</span><span class="n">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">jekyll</span><span class="w"> </span><span class="nx">serve</span><span class="w"> </span><span class="nt">--baseurl</span><span class="o">=</span><span class="s2">""</span><span class="w">
-</span></code></pre></div></div> <p>https://jekyllrb.com/showcase/</p> <p>We only cover RubyInstaller-2.4 and newer here. Older versions need to <a href="https://github.com/oneclick/rubyinstaller/wiki/Development-Kit">install the Devkit</a> manually.</p> <ol> <li>Download and install a <strong>Ruby+Devkit</strong> version from <a href="https://rubyinstaller.org/downloads/">RubyInstaller Downloads</a>. Use default options for installation.</li> <li>Run the <code class="language-plaintext highlighter-rouge">ridk install</code> step on the last stage of the installation wizard. This is needed for installing gems with native extensions. You can find additional information regarding this in the <a href="https://github.com/oneclick/rubyinstaller2#using-the-installer-on-a-target-system">RubyInstaller Documentation</a>. From the options choose <code class="language-plaintext highlighter-rouge">MSYS2 and MINGW development toolchain</code>.</li> <li>Open a new command prompt window from the start menu, so that changes to the <code class="language-plaintext highlighter-rouge">PATH</code> environment variable becomes effective. Install Jekyll and Bundler using <code class="language-plaintext highlighter-rouge">gem install jekyll bundler</code></li> <li>Check if Jekyll has been installed properly: <code class="language-plaintext highlighter-rouge">jekyll -v</code></li> </ol>]]></content><author><name></name></author><category term="sample-posts"/><category term="Git"/><summary type="html"><![CDATA[How to fix git issue]]></summary></entry><entry><title type="html">Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra</title><link href="https://yayalingo.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra/" rel="alternate" type="text/html" title="Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra"/><published>2024-05-14T00:00:00+00:00</published><updated>2024-05-14T00:00:00+00:00</updated><id>https://yayalingo.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra</id><content type="html" xml:base="https://yayalingo.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra/"><![CDATA[]]></content><author><name></name></author><summary type="html"><![CDATA[We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.]]></summary></entry><entry><title type="html">a post with tabs</title><link href="https://yayalingo.github.io/blog/2024/tabs/" rel="alternate" type="text/html" title="a post with tabs"/><published>2024-05-01T00:32:13+00:00</published><updated>2024-05-01T00:32:13+00:00</updated><id>https://yayalingo.github.io/blog/2024/tabs</id><content type="html" xml:base="https://yayalingo.github.io/blog/2024/tabs/"><![CDATA[<p>This is how a post with <a href="https://github.com/Ovski4/jekyll-tabs">tabs</a> looks like. Note that the tabs could be used for different purposes, not only for code.</p> <h2 id="first-tabs">First tabs</h2> <p>To add tabs, use the following syntax:</p> <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">{%</span><span class="w"> </span><span class="nt">tabs</span><span class="w"> </span><span class="nv">group-name</span><span class="w"> </span><span class="cp">%}</span>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://yayalingo.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://yayalingo.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-11-25T07:44:53+00:00</updated><id>https://yayalingo.github.io/feed.xml</id><title type="html">blank</title><subtitle>This is a people who want to have a small step to future based on what we have now. </subtitle><entry><title type="html">Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra</title><link href="https://yayalingo.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra/" rel="alternate" type="text/html" title="Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra"/><published>2024-05-14T00:00:00+00:00</published><updated>2024-05-14T00:00:00+00:00</updated><id>https://yayalingo.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra</id><content type="html" xml:base="https://yayalingo.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra/"><![CDATA[]]></content><author><name></name></author><summary type="html"><![CDATA[We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.]]></summary></entry><entry><title type="html">a post with tabs</title><link href="https://yayalingo.github.io/blog/2024/tabs/" rel="alternate" type="text/html" title="a post with tabs"/><published>2024-05-01T00:32:13+00:00</published><updated>2024-05-01T00:32:13+00:00</updated><id>https://yayalingo.github.io/blog/2024/tabs</id><content type="html" xml:base="https://yayalingo.github.io/blog/2024/tabs/"><![CDATA[<p>This is how a post with <a href="https://github.com/Ovski4/jekyll-tabs">tabs</a> looks like. Note that the tabs could be used for different purposes, not only for code.</p> <h2 id="first-tabs">First tabs</h2> <p>To add tabs, use the following syntax:</p> <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">{%</span><span class="w"> </span><span class="nt">tabs</span><span class="w"> </span><span class="nv">group-name</span><span class="w"> </span><span class="cp">%}</span>
 
 <span class="cp">{%</span><span class="w"> </span><span class="nt">tab</span><span class="w"> </span><span class="nv">group-name</span><span class="w"> </span><span class="nv">tab-name-1</span><span class="w"> </span><span class="cp">%}</span>
 
@@ -60,16 +13,16 @@ Content 2
 <span class="cp">{%</span><span class="w"> </span><span class="nt">endtab</span><span class="w"> </span><span class="cp">%}</span>
 
 <span class="cp">{%</span><span class="w"> </span><span class="nt">endtabs</span><span class="w"> </span><span class="cp">%}</span>
-</code></pre></div></div> <p>With this you can generate visualizations like:</p> <ul id="log" class="tab" data-tab="8a6e5931-5a11-4bf5-9669-91224bdf714c" data-name="log"> <li class="active" id="log-php"> <a href="#">php </a> </li> <li id="log-js"> <a href="#">js </a> </li> <li id="log-ruby"> <a href="#">ruby </a> </li> </ul> <ul class="tab-content" id="8a6e5931-5a11-4bf5-9669-91224bdf714c" data-name="log"> <li class="active"> <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">var_dump</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">);</span>
+</code></pre></div></div> <p>With this you can generate visualizations like:</p> <ul id="log" class="tab" data-tab="49887daf-379d-4c92-a661-82bf48a11b0b" data-name="log"> <li class="active" id="log-php"> <a href="#">php </a> </li> <li id="log-js"> <a href="#">js </a> </li> <li id="log-ruby"> <a href="#">ruby </a> </li> </ul> <ul class="tab-content" id="49887daf-379d-4c92-a661-82bf48a11b0b" data-name="log"> <li class="active"> <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">var_dump</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">);</span>
 </code></pre></div></div> </li> <li> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">hello</span><span class="dl">"</span><span class="p">);</span>
 </code></pre></div></div> </li> <li> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">pputs</span> <span class="dl">'</span><span class="s1">hello</span><span class="dl">'</span>
-</code></pre></div></div> </li> </ul> <h2 id="another-example">Another example</h2> <ul id="data-struct" class="tab" data-tab="e6e7913a-829a-40f7-ad4d-7cd7356a4649" data-name="data-struct"> <li class="active" id="data-struct-yaml"> <a href="#">yaml </a> </li> <li id="data-struct-json"> <a href="#">json </a> </li> </ul> <ul class="tab-content" id="e6e7913a-829a-40f7-ad4d-7cd7356a4649" data-name="data-struct"> <li class="active"> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">hello</span><span class="pi">:</span>
+</code></pre></div></div> </li> </ul> <h2 id="another-example">Another example</h2> <ul id="data-struct" class="tab" data-tab="1d5d40cb-7cd3-4c6e-8407-84b26d87781c" data-name="data-struct"> <li class="active" id="data-struct-yaml"> <a href="#">yaml </a> </li> <li id="data-struct-json"> <a href="#">json </a> </li> </ul> <ul class="tab-content" id="1d5d40cb-7cd3-4c6e-8407-84b26d87781c" data-name="data-struct"> <li class="active"> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">hello</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="s2">"</span><span class="s">whatsup"</span>
   <span class="pi">-</span> <span class="s2">"</span><span class="s">hi"</span>
 </code></pre></div></div> </li> <li> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"hello"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"whatsup"</span><span class="p">,</span><span class="w"> </span><span class="s2">"hi"</span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div></div> </li> </ul> <h2 id="tabs-for-something-else">Tabs for something else</h2> <ul id="something-else" class="tab" data-tab="82d0866a-6f9b-4d86-bd62-c681570c073e" data-name="something-else"> <li class="active" id="something-else-text"> <a href="#">text </a> </li> <li id="something-else-quote"> <a href="#">quote </a> </li> <li id="something-else-list"> <a href="#">list </a> </li> </ul> <ul class="tab-content" id="82d0866a-6f9b-4d86-bd62-c681570c073e" data-name="something-else"> <li class="active"> <p>Regular text</p> </li> <li> <blockquote> <p>A quote</p> </blockquote> </li> <li> <p>Hipster list</p> <ul> <li>brunch</li> <li>fixie</li> <li>raybans</li> <li>messenger bag</li> </ul> </li> </ul>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is what included tabs in a post could look like]]></summary></entry><entry><title type="html">a post with typograms</title><link href="https://yayalingo.github.io/blog/2024/typograms/" rel="alternate" type="text/html" title="a post with typograms"/><published>2024-04-29T23:36:10+00:00</published><updated>2024-04-29T23:36:10+00:00</updated><id>https://yayalingo.github.io/blog/2024/typograms</id><content type="html" xml:base="https://yayalingo.github.io/blog/2024/typograms/"><![CDATA[<p>This is an example post with some <a href="https://github.com/google/typograms/">typograms</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">typograms
+</span></code></pre></div></div> </li> </ul> <h2 id="tabs-for-something-else">Tabs for something else</h2> <ul id="something-else" class="tab" data-tab="7e5f8b74-aeb1-467d-b135-6d6e460161de" data-name="something-else"> <li class="active" id="something-else-text"> <a href="#">text </a> </li> <li id="something-else-quote"> <a href="#">quote </a> </li> <li id="something-else-list"> <a href="#">list </a> </li> </ul> <ul class="tab-content" id="7e5f8b74-aeb1-467d-b135-6d6e460161de" data-name="something-else"> <li class="active"> <p>Regular text</p> </li> <li> <blockquote> <p>A quote</p> </blockquote> </li> <li> <p>Hipster list</p> <ul> <li>brunch</li> <li>fixie</li> <li>raybans</li> <li>messenger bag</li> </ul> </li> </ul>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is what included tabs in a post could look like]]></summary></entry><entry><title type="html">a post with typograms</title><link href="https://yayalingo.github.io/blog/2024/typograms/" rel="alternate" type="text/html" title="a post with typograms"/><published>2024-04-29T23:36:10+00:00</published><updated>2024-04-29T23:36:10+00:00</updated><id>https://yayalingo.github.io/blog/2024/typograms</id><content type="html" xml:base="https://yayalingo.github.io/blog/2024/typograms/"><![CDATA[<p>This is an example post with some <a href="https://github.com/google/typograms/">typograms</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">typograms
 </span><span class="sb">+----+
 |    |---&gt; My first diagram!
 +----+</span>
@@ -775,4 +728,50 @@ index 3bb754ac..a34839c0 100644
     }
   ]
 }
-</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><category term="maps"/><summary type="html"><![CDATA[this is what included geojson code could look like]]></summary></entry></feed>
+</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><category term="maps"/><summary type="html"><![CDATA[this is what included geojson code could look like]]></summary></entry><entry><title type="html">a post with echarts</title><link href="https://yayalingo.github.io/blog/2024/echarts/" rel="alternate" type="text/html" title="a post with echarts"/><published>2024-01-26T16:03:00+00:00</published><updated>2024-01-26T16:03:00+00:00</updated><id>https://yayalingo.github.io/blog/2024/echarts</id><content type="html" xml:base="https://yayalingo.github.io/blog/2024/echarts/"><![CDATA[<p>This is an example post with some <a href="https://echarts.apache.org/">echarts</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">echarts
+</span><span class="sb">{
+  "title": {
+    "text": "ECharts Getting Started Example"
+  },
+  "responsive": true,
+  "tooltip": {},
+  "legend": {
+    "top": "30px",
+    "data": ["sales"]
+  },
+  "xAxis": {
+    "data": ["Shirts", "Cardigans", "Chiffons", "Pants", "Heels", "Socks"]
+  },
+  "yAxis": {},
+  "series": [
+    {
+      "name": "sales",
+      "type": "bar",
+      "data": [5, 20, 36, 10, 10, 20]
+    }
+  ]
+}</span>
+<span class="p">```</span>
+</code></pre></div></div> <p>Which generates:</p> <pre><code class="language-echarts">{
+  "title": {
+    "text": "ECharts Getting Started Example"
+  },
+  "responsive": true,
+  "tooltip": {},
+  "legend": {
+    "top": "30px",
+    "data": ["sales"]
+  },
+  "xAxis": {
+    "data": ["Shirts", "Cardigans", "Chiffons", "Pants", "Heels", "Socks"]
+  },
+  "yAxis": {},
+  "series": [
+    {
+      "name": "sales",
+      "type": "bar",
+      "data": [5, 20, 36, 10, 10, 20]
+    }
+  ]
+}
+</code></pre> <p>Note that this library offer support for both light and dark themes. You can switch between them using the theme switcher in the top right corner of the page.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><summary type="html"><![CDATA[this is what included echarts code could look like]]></summary></entry></feed>
